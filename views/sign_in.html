@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>电子数据认证平台-账号注册</title>
+    <link rel="icon" type="image/x-ico" href="../static/img/logoTitle.png"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/style_sign_in.css"/>
+    <script src="../static/js/fairyDustCursor.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        body {
+            overflow: hidden;
+        }
+
+        .sign_in_from input {
+            width: 66%;
+            height: 30px;
+            padding: 0 10px;
+            margin: 8px 12px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        .sign_in_from p input {
+
+            width: 16px;
+            height: 16px;
+            padding: 0;
+            margin: 0;
+            vertical-align: text-bottom;
+        }
+
+        .sign_in_from p input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+        }
+
+        .sign_in_from p label {
+
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #999;
+        }
+
+        .sign_in_from p label[
+
+        0
+        ]
+        {
+            position: absolute
+        ;
+            top: 50%
+        ;
+            left: 50%
+        ;
+        }
+        .sign_in_from p label[
+
+        1
+        ]
+        {
+            position: absolute
+        ;
+            top: 50%
+        ;
+            left: 80%
+        ;
+        }
+
+        /*设置选中的input的样式*/
+        /* + 是兄弟选择器,获取选中后的label元素*/
+        .sign_in_from p input:checked + label {
+            background-color: #fe6d32;
+            border: 1px solid #fe6d32;
+        }
+
+
+        .sign_in_from #reset, .sign_in_from #submit {
+            width: 33%;
+            height: auto;
+            padding: 8px 10px;
+            cursor: pointer;
+            border: 1px solid black;
+            line-height: 16px;
+            border-radius: 15%;
+        }
+
+        .sign_in_from #reset:hover, .sign_in_from #submit:hover {
+            background-color: #fe6d32;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="formBox">
+    <h2>电子数据认证平台用户注册</h2>
+
+    <form id="" action="/sign_in" method="post" class="sign_in_from">
+
+        <input type="text" name="username" id="username" placeholder="用户名"/>
+        <p>性别 ：
+
+            <input type="radio" name="sex" id="man" value="man"/><label for="man">男</label>
+
+            <input type="radio" name="sex" id="woman" value="woman"/><label for="woman">女</label>
+
+        </p>
+        <input type="password" name="password1" id="pwd1" placeholder="密码"/>
+        <input type="password" name="password2" id="pwd2" placeholder="确认密码"/>
+        <input type="text" name="phone" id="phone" placeholder="手机号码" maxlength="11"
+               oninput="value=value.replace(/[^\d]/g,'')"/>
+        <input type="email" name="email" id="email" placeholder="电子邮箱"/>
+
+        <input type="reset" id="reset" class="from_btn" value="清空"/>
+        <input type="submit" id="submit" class="from_btn" value="注册"/>
+        <br>
+        <br>
+        <a href="login.html" style="color:#fe6d32 ">已有账号? 点此登录</a>
+    </form>
+</div>
+</body>
+<script type="text/javascript">
+    var usename = document.getElementById("username");
+    var pwd1 = document.getElementById("pwd1");
+    var pwd2 = document.getElementById("pwd2");
+    var phone = document.getElementById("phoneNumber");
+    var email = document.getElementById("email")
+    var sub = document.getElementById("submit");
+    sub.onclick = function () {
+        if (usename.value === "" || pwd1.value === "" || phone.value === "" || email.value === "") {
+            alert("信息填写完整后再确认提交 !!!")
+            usename.value = "";
+            pwd1.value = "";
+            phone.value = "";
+            email.value = "";
+        }
+
+        if (pwd1.value !== pwd2.value) {
+            alert("两次密码不一致，请重新确认您输入的密码！")
+            pwd1.value = "";
+            pwd2.value = "";
+        }
+    }
+
+</script>
+</html>
