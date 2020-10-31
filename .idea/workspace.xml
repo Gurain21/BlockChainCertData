@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c3b5b83-5c99-42e6-8d29-8c0827f0ea52" name="Default Changelist" comment="" />
+    <list default="true" id="0c3b5b83-5c99-42e6-8d29-8c0827f0ea52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/block_chain/block.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block_chain/blockchain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/block_chain/pow.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/CertRecor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/app-5e0455372927b43eec8b.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/app-de629dfeac93cb9584b8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/app-f03c3be68c19ce58d4ff.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/common-5e0455372927b43eec8b.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/common-de629dfeac93cb9584b8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/common-f03c3be68c19ce58d4ff.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/WeChatImg-8lg-GUI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/HomeNew-f8f62.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/UserAttAdd-ab4c6.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/UserAttList-538b0.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/UserChart-515e7.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/UserLoginForm-86fb5.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/UserRegistryForm-ef59c.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/app-de629dfeac93cb9584b8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/app-f03c3be68c19ce58d4ff.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/b.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/common-de629dfeac93cb9584b8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/common-f03c3be68c19ce58d4ff.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/data-set.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/es6-shim-8e9077312e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/hm(1).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/hm(2).js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/hm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery-02053ebe83.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/pc_nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/push.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/cert_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/list_record.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/user_kyc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/uploadRecord.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/uploadRecord.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +55,11 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jaoqjQCxrMRmZ4Ezkc6JXMpRBF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,13 +71,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Code\Golang\GoProjects\src\BlockChainCertDataPorject\static" />
+      <recent name="E:\Code\Golang\GoProjects\src\BlockChainCertDataPorject\views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="go build BlockChainCertDataPorject" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -58,25 +108,41 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="495" y="101" key="#go_build_BlockChainCertDataPorject/0.0.1536.864@0.0.1536.864" timestamp="1604051787908" />
-    <state x="548" y="190" key="FileChooserDialogImpl" timestamp="1604052398856">
+    <state x="548" y="190" key="FileChooserDialogImpl" timestamp="1604126039591">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="548" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604052398856" />
-    <state width="772" height="224" key="GridCell.Tab.0.bottom" timestamp="1604055419673">
+    <state x="548" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604126039591" />
+    <state width="863" height="224" key="GridCell.Tab.0.bottom" timestamp="1604138849156">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="772" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1604055419673" />
-    <state width="772" height="224" key="GridCell.Tab.0.center" timestamp="1604055419673">
+    <state width="863" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1604138849156" />
+    <state width="863" height="224" key="GridCell.Tab.0.center" timestamp="1604138849156">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="772" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1604055419673" />
-    <state width="772" height="224" key="GridCell.Tab.0.left" timestamp="1604055419673">
+    <state width="863" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1604138849156" />
+    <state width="863" height="224" key="GridCell.Tab.0.left" timestamp="1604138849156">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="772" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1604055419673" />
-    <state width="772" height="224" key="GridCell.Tab.0.right" timestamp="1604055419673">
+    <state width="863" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1604138849156" />
+    <state width="863" height="224" key="GridCell.Tab.0.right" timestamp="1604138849156">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="772" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1604055419673" />
+    <state width="863" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1604138849156" />
+    <state x="0" y="105" width="877" height="590" key="dock-window-1" timestamp="1604139098460">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="0" y="105" width="877" height="590" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1604139098460" />
+    <state x="114" y="0" width="1169" height="842" key="dock-window-2" timestamp="1604140171805">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="114" y="0" width="1169" height="842" key="dock-window-2/0.0.1536.864@0.0.1536.864" timestamp="1604140171805" />
+    <state x="46" y="0" width="877" height="842" key="dock-window-3" timestamp="1604141816767">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="46" y="0" width="877" height="842" key="dock-window-3/0.0.1536.864@0.0.1536.864" timestamp="1604141816767" />
+    <state x="783" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1604129421045">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="783" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1604129421045" />
   </component>
 </project>
