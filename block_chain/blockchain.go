@@ -1,6 +1,8 @@
 package block_chain
 
 import (
+	"DataCertPhone/models"
+	"encoding/hex"
 	"errors"
 	"github.com/boltdb/bolt"
 	"math/big"
@@ -76,11 +78,11 @@ func (bc BlockChian) QueryAllBlocks() ([]*Block, error) {
 				return err
 			}
 			blocks = append(blocks, eachBlock)
-			eachBig.SetBytes(eachBlock.PreHash)
+			eachBig.SetBytes(eachBlock.PrevHash)
 			if eachBig.Cmp(zeroBig) == 0 {
 				break
 			}
-			eachHash = eachBlock.PreHash
+			eachHash = eachBlock.PrevHash
 		}
 
 		return err
@@ -117,7 +119,7 @@ func (bc BlockChian) QueryBlockByHEight(height int64) (*Block, error) {
 			if targetBlock.Height == height {
 				break
 			} else {
-				eachHash = targetBlock.PreHash
+				eachHash = targetBlock.PrevHash
 			}
 
 		}
@@ -163,4 +165,45 @@ func (bc *BlockChian) SaveData(data []byte) (Block, error) {
 		return err
 	})
 	return newBlock, err
+}
+//通过block.Data中的CertId (md5哈希)来查询区块
+func (bc BlockChian) QueryBlockByCertId(cert_id string) (*Block, error) {
+	db := bc.BoltDB
+	var err error
+	var block *Block
+	db.View(func(tx *bolt.Tx) error {
+		bucket := tx.Bucket([]byte(BUCKET_NAMEM_BLOCKS))
+		if bucket == nil { //判断桶是否存在
+			err = errors.New("查询链上数据发生错误，请重试！")
+			return err
+		}
+		eachHash := bc.LastHash
+
+		eachBig := new(big.Int)
+		zeroBig := big.NewInt(0)
+		for {
+			eachBlockBytes := bucket.Get(eachHash)
+			eachBlock, err := DeSerialize(eachBlockBytes)
+			if err != nil {
+				break
+			}
+			//将遍历到的区块中的数据跟用户提供的认证号进行比较
+			certRecord ,err := models.DeserializeCertRecord(eachBlock.Data)
+			if err != nil {
+				break
+			}
+			if hex.EncodeToString(certRecord.CertId) == cert_id { //if成立，找到区块了
+				block = eachBlock
+				break
+			}
+
+			eachBig.SetBytes(eachBlock.PrevHash)
+			if eachBig.Cmp(zeroBig) == 0 { //到创世区块了，停止遍历
+				break
+			}
+			eachHash = eachBlock.PrevHash
+		}
+		return nil
+	})
+	return block, err
 }

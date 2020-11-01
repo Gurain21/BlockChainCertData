@@ -10,7 +10,7 @@ import (
 type Block struct {
 	Height     int64  //区块的高度
 	TimeStamp  int64  //区块创建的时间戳
-	PreHash    []byte //上一个区块的hash
+	PrevHash    []byte //上一个区块的hash
 	Data       []byte //本区块要存储的数据
 	Hash       []byte //本区块的hash
 	Nonce      int64  //随机数
@@ -23,7 +23,7 @@ func NewBlock(height int64, prevHash, data []byte) Block {
 	newblock := Block{
 		Height:    height,
 		TimeStamp: time.Now().Unix(),
-		PreHash:   prevHash,
+		PrevHash:   prevHash,
 		Data:      data,
 		Hash:      nil,
 		Nonce:     0,
@@ -46,7 +46,7 @@ func Block2Bytes(block Block) ([]byte, error) {
 
 	blockBytes := bytes.Join(
 		[][]byte{
-			heightBytes, timeBytes, versionBytes, block.PreHash, block.Data,
+			heightBytes, timeBytes, versionBytes, block.PrevHash, block.Data,
 		}, []byte{})
 	return blockBytes, nil
 }
