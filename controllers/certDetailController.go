@@ -7,6 +7,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	"github.com/astaxie/beego"
+	"strings"
 )
 
 type CertDetailController struct {
@@ -40,11 +41,9 @@ func (c *CertDetailController)Get()  {
 
 	?
 	 */
-	certRecord.CertIdFormat = hex.EncodeToString(certRecord.CertId)
+	certRecord.CertIdFormat =strings.ToTitle( hex.EncodeToString(certRecord.CertId))
 	certRecord.CertHashFormat = hex.EncodeToString(certRecord.CertHash)
 	certRecord.CertTimeFormat = utils_BCCDP.TimeFormat(certRecord.CertTime,utils_BCCDP.TIME_FORMAT_ONE)
-md5bytes := utils_BCCDP.MD5HashByte(certRecord.CertId)
-fmt.Println(hex.EncodeToString(md5bytes))
 //fmt.Println(hex.EncodeToString(certRecord.CertHash))
 	//结构体
 	c.Data["CertRecord"] = certRecord
