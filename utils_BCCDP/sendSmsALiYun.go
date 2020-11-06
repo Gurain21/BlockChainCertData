@@ -70,11 +70,11 @@ type SmsResult struct {
 }
 
 func GenRandCode(width int)string  {
-	numeric :=[10]byte{0,1,2,3,4,5,6,7,8,9}
+	//numeric :=[10]byte{0,1,2,3,4,5,6,7,8,9}
 	rand.Seed(time.Now().UnixNano())
 	var sb strings.Builder
 	for i:=0;i<width ;i++  {
-	fmt.Fprintf(&sb,"%d",numeric[rand.Intn(len(numeric))])
+	fmt.Fprintf(&sb,"%d",byte(rand.Intn(10)))
 	}
 return  sb.String()
 }
