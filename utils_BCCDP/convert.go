@@ -14,4 +14,6 @@ func Int64ToByte(num int64)([]byte,error)  {
 	}
 	return buff.Bytes(),nil
 }
-
+func Int64ToByte2(num int64)([]byte,error) {
+	buff := new(bytes.Buffer)
+}
