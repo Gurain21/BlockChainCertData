@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c3b5b83-5c99-42e6-8d29-8c0827f0ea52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/loginSMSController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/SmsLogin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/login_sms_second.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/sendSmsController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils_BCCDP/des.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils_BCCDP/convert.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils_BCCDP/convert.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login_sms.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login_sms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/block_chain/block.go" beforeDir="false" afterPath="$PROJECT_DIR$/block_chain/block.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/uploadFileController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/uploadFileController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_mysql/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/database_mysql/db.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

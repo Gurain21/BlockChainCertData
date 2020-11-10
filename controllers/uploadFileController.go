@@ -44,6 +44,7 @@ func (u *UploadFileController) Post() {
 		u.Ctx.WriteString("上传文件遇到错误，请稍后重试！")
 		return
 	}
+
 	defer file.Close()
 	isJpg := strings.HasSuffix(strings.ToLower(fileHeader.Filename), ".jpg")
 	isPng := strings.HasSuffix(strings.ToLower(fileHeader.Filename), ".png")

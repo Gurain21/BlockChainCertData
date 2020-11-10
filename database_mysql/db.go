@@ -13,5 +13,5 @@ func OpenDB() {
 		panic(err.Error())
 	}
 	DB_BCCDP = db
-
+	db.Driver().Open()
 }
