@@ -16,4 +16,10 @@ func Int64ToByte(num int64)([]byte,error)  {
 }
 func Int64ToByte2(num int64)([]byte,error) {
 	buff := new(bytes.Buffer)
+	err := binary.Write(buff,binary.LittleEndian,num)
+	if err != nil {
+		return nil,err
+
+	}
+	return buff.Bytes(),nil
 }
