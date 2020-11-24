@@ -7,10 +7,11 @@ import (
 	"crypto/rsa"
 	"crypto/sha256"
 	"crypto/x509"
+	"encoding/base64"
 	"encoding/pem"
 	"flag"
 	"fmt"
-	"math/big"
+	"io/ioutil"
 	"os"
 )
 /**RSA算法加密步骤：
@@ -178,7 +179,27 @@ func GeneratePemFilesByPrivateKey(key *rsa.PrivateKey,filename string) error {
 	}
 	return nil
 }
+//______________________________________读取pem文件格式的秘钥————————————————--
 
+func ReadPemPriKey(filename string)(*rsa.PrivateKey,error){
+	blockBytes,err := ioutil.ReadFile(filename)
+	if err != nil {
+		return	nil, err
+	}
+	block,_ :=pem.Decode(blockBytes)
+	return  x509.ParsePKCS1PrivateKey(block.Bytes)
+
+
+}
+func  ReadPemPubKey(filename string)(*rsa.PublicKey,error) {
+	fileBytes,err := ioutil.ReadFile(filename)
+	if err != nil {
+		return nil,err
+	}
+	block,_ := pem.Decode(fileBytes)
+	return x509.ParsePKCS1PublicKey(block.Bytes)
+
+}
 /**
 *使用MD5哈希[]byte
  */
@@ -192,3 +213,20 @@ func HashSha256(data []byte) []byte {
 	sha256Hash.Write(data)
 	return sha256Hash.Sum(nil)
 }
+func Base64Encode(data []byte)([]byte){
+
+	//base64.NewEncoder(base64.NewEncoding(base64.StdEncoding),io.Writer())
+	encoding := base64.StdEncoding
+	dst := make([]byte,len(data))
+	encoding.Encode(dst,data)
+	return  dst
+}
+func Base64Decode(data []byte)([]byte){
+	dst :=  make([]byte,len(data))
+	base64.StdEncoding.Decode(dst,data)
+	return dst
+}
+//func Base58Encode(data []byte)([]byte)  {
+//	//github
+//}
+
